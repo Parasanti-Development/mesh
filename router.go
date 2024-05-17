@@ -125,7 +125,7 @@ func (router *Router) listenTCP() {
 				continue
 			}
 			if remoteAddr.Port != router.Port {
-				router.logger.Printf("Ignoring connection from port %d, expected %d", remoteAddr.Port, router.Port)
+				router.logger.Printf("Ignoring connection %s, expected %d", tcpConn.RemoteAddr().String(), router.Port)
 				tcpConn.Close()
 				continue
 			}
