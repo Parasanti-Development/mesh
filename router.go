@@ -117,8 +117,18 @@ func (router *Router) listenTCP() {
 				router.logger.Printf("%v", err)
 				continue
 			}
-			router.acceptTCP(tcpConn)
-			router.acceptLimiter.wait()
+			// Check if the remote address's port matches the router's port
+			remoteAddr, ok := tcpConn.RemoteAddr().(*net.TCPAddr)
+			if !ok {
+				router.logger.Printf("Error casting remote address to TCPAddr")
+				tcpConn.Close()
+				continue
+			}
+			if remoteAddr.Port != router.Port {
+				router.logger.Printf("Ignoring connection from port %d, expected %d", remoteAddr.Port, router.Port)
+				tcpConn.Close()
+				continue
+			}
 		}
 	}()
 }
