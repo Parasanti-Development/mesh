@@ -14,9 +14,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/weaveworks/mesh"
-	"github.com/weaveworks/mesh/meshconn"
-	"github.com/weaveworks/mesh/metcd"
+	"github.com/Parasanti-Development/mesh"
+	"github.com/Parasanti-Development/mesh/meshconn"
+	"github.com/Parasanti-Development/mesh/metcd"
 )
 
 func main() {

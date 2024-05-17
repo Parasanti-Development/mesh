@@ -14,7 +14,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/weaveworks/mesh"
+	"github.com/Parasanti-Development/mesh"
 )
 
 func main() {

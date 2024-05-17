@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/gob"
 
-	"github.com/weaveworks/mesh"
+	"github.com/Parasanti-Development/mesh"
 )
 
 type pkt struct {

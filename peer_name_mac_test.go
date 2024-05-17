@@ -1,10 +1,11 @@
+//go:build peer_name_mac || !peer_name_alternative
 // +build peer_name_mac !peer_name_alternative
 
 package mesh_test
 
 import (
+	"github.com/Parasanti-Development/mesh"
 	"github.com/stretchr/testify/require"
-	"github.com/weaveworks/mesh"
 	"testing"
 )
 

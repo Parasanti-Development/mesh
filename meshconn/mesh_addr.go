@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/weaveworks/mesh"
+	"github.com/Parasanti-Development/mesh"
 )
 
 // MeshAddr implements net.Addr for mesh peers.

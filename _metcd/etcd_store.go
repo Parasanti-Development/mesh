@@ -8,6 +8,7 @@ import (
 	"os"
 	"sort"
 
+	"github.com/Parasanti-Development/mesh"
 	"github.com/coreos/etcd/etcdserver/etcdserverpb"
 	"github.com/coreos/etcd/lease"
 	"github.com/coreos/etcd/mvcc"
@@ -15,7 +16,6 @@ import (
 	"github.com/coreos/etcd/mvcc/mvccpb"
 	"github.com/coreos/etcd/raft/raftpb"
 	"github.com/gogo/protobuf/proto"
-	"github.com/weaveworks/mesh"
 	"golang.org/x/net/context"
 )
 
